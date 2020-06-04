@@ -1,0 +1,12 @@
+{
+  "name": "TLib/traitlib",
+  "license": "mit",
+  "autoload": {
+    "psr-4": {
+      "TL\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  }
+}
