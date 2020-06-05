@@ -4,10 +4,6 @@
 namespace TL\lists;
 
 
-
-namespace GDV2IMA\model\gdv;
-
-
 use Exception;
 
 trait TArrayAccess
