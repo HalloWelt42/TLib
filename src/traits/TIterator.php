@@ -1,13 +1,13 @@
 <?php
 
 
-namespace TL\lists;
+namespace TL\traits;
 
 /**
  * Trait TArrayIterator
  * @package TL\lists
  */
-trait TArrayIterator
+trait TIterator
 {
 
   /**

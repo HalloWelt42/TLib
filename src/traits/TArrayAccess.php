@@ -1,30 +1,24 @@
 <?php
 
 
-namespace TL\lists;
+namespace TL\traits;
 
 
 use Exception;
 
+/**
+ * Trait TArrayAccess
+ * @package TL\lists
+ */
 trait TArrayAccess
 {
 
-  /**
-   * @var array
-   */
-  protected $container;
 
   /**
    * @var int
    */
   protected $position;
 
-  public function __construct()
-  {
-    $this->container=[];
-    $this->position = 0;
-
-  }
 
   /**
    * @inheritDoc
@@ -42,14 +36,21 @@ trait TArrayAccess
   }
 
   /**
+   * this section goes into the class used / function protected or public typeTest( $value )
+   *
+   *    if( $val instanceof ExampleType === false ){
+   *      throw new Exception();
+   *    }
+   *
+   *
    * @inheritDoc
    */
   public function offsetSet($offset, $value) {
 
     try {
-      $this->type_testing($value);
+      $this->typeTest($value);
     }catch (Exception $exception){
-      print_r($exception->getTraceAsString());
+      error_log($exception->getTraceAsString() );
       exit;
     }
 
