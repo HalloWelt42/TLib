@@ -6,7 +6,11 @@ namespace TL\traits;
 
 trait TCountable
 {
+
+  /**
+   * @return int
+   */
   public function count(){
-    count($this -> container );
+    return count($this -> container );
   }
 }

@@ -31,8 +31,9 @@ trait TArrayAccess
   /**
    * @inheritDoc
    */
-  public function offsetGet($offset) {
-    return isset($this->container[$offset]) ? $this->container[$offset] : null;
+  public function offsetGet($offset)
+  {
+    return isset($this->container[$offset]) ? $this->container[$offset] : NULL;
   }
 
   /**
@@ -45,13 +46,14 @@ trait TArrayAccess
    *
    * @inheritDoc
    */
-  public function offsetSet($offset, $value) {
+  public function offsetSet($offset, $value)
+  {
 
     try {
       $this->typeTest($value);
-    }catch (Exception $exception){
-      error_log($exception->getTraceAsString() );
-      exit;
+    } catch (Exception $exception) {
+      error_log($exception->getTraceAsString());
+      return;
     }
 
     if (is_null($offset)) {
@@ -64,7 +66,8 @@ trait TArrayAccess
   /**
    * @inheritDoc
    */
-  public function offsetUnset($offset) {
+  public function offsetUnset($offset)
+  {
     unset($this->container[$offset]);
   }
 }
