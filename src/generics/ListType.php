@@ -8,9 +8,9 @@ use ArrayIterator;
 use Countable;
 use Exception;
 use Iterator;
-use TL\traits\TArrayAccess;
-use TL\traits\TCountable;
-use TL\traits\TIterator;
+use TL\listoperations\TArrayAccess;
+use TL\listoperations\TCountable;
+use TL\listoperations\TIterator;
 
 
 /**
