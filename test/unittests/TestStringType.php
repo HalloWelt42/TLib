@@ -5,6 +5,7 @@ namespace unittests;
 
 
 use PHPUnit\Framework\TestCase;
+use stdClass;
 use TL\basetypes\StringType;
 
 class TestStringType extends TestCase
@@ -24,7 +25,7 @@ class TestStringType extends TestCase
     $str_obj = new StringType(null);
     $this->assertEquals('',(string)$str_obj);
 
-    $str_obj = new StringType(new \stdClass());
+    $str_obj = new StringType(new stdClass());
     $this->assertEquals('',(string)$str_obj);
 
     $str_obj = new StringType([]);

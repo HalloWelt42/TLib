@@ -4,13 +4,13 @@
 namespace TL\generics;
 
 use ArrayAccess;
-use ArrayIterator;
 use Countable;
 use Exception;
-use Iterator;
+use SeekableIterator;
 use TL\listoperations\TArrayAccess;
 use TL\listoperations\TCountable;
 use TL\listoperations\TIterator;
+use TL\listoperations\TSeekable;
 
 
 /**
@@ -19,11 +19,12 @@ use TL\listoperations\TIterator;
  * Class ListType
  * @package TL\lists
  */
-class ListType implements ArrayAccess , Iterator  /*SeekableIterator*/, Countable  /*Serializable*/
+class ListType implements ArrayAccess , SeekableIterator, Countable  /*Serializable*/
 {
 
   use TArrayAccess;
   use TCountable;
+  use TSeekable;
   use TIterator;
 
   /**
@@ -65,7 +66,6 @@ class ListType implements ArrayAccess , Iterator  /*SeekableIterator*/, Countabl
       throw new Exception();
     }
   }
-
 
 
 }
