@@ -10,7 +10,7 @@ use TL\basetypes\StringType;
 class TestStringFunctionPart extends TestCase
 {
 
-  public function testPart(){
+  public function test_cutPreFix(){
 
     $this->assertEquals(
           'World!',
@@ -56,6 +56,14 @@ class TestStringFunctionPart extends TestCase
 
 
 
+  }
+
+  public function test_cutPostFix(){
+    $this->assertEquals(
+        'Hallo',
+        (string)( new StringType('HalloWorld!'))->cutPostFix('World!'),
+        'HalloWorld! - World! = Hallo'
+    );
   }
 
 }
