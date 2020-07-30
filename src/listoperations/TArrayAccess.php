@@ -33,7 +33,7 @@ trait TArrayAccess
    */
   public function offsetGet($offset)
   {
-    return isset($this->container[$offset]) ? $this->container[$offset] : NULL;
+    return $this->container[$offset] ?? NULL;
   }
 
   /**

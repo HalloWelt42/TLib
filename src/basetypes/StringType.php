@@ -51,7 +51,7 @@ class StringType
    *
    * @return $this
    */
-  public function set($val)
+  public function set($val): self
   {
 
     /**
